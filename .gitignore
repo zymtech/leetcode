@@ -1,8 +1,8 @@
 *.class
 .metadata/
 .recommenders/
-leetcode/.settings/
-leetcode/bin/
+leetcodejava/.settings/
+leetcodejava/bin/
 *.classpath
 *.project
 # Mobile Tools for Java (J2ME)
