@@ -1,4 +1,5 @@
 *.class
+*.idea/
 .metadata/
 .recommenders/
 leetcodejava/.settings/
