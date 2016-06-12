@@ -1,6 +1,7 @@
 # -*-coding: utf8 -*-
 import math
 
+
 class Solution:
     """
     plate number
