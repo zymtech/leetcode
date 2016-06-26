@@ -45,6 +45,7 @@ class Solution(object):
             b[size - 1] = a[i]
             if b[size - 1] * a[size - 1] <= target:
                 self.calc(a, b, target, size - 1)
+            print b
 
 if __name__=='__main__':
 
