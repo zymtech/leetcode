@@ -11,9 +11,7 @@ class ListNode(object):
             return "{} -> {}".format(self.val, self.next)
 
 if __name__ == '__main__':
-    b = ListNode(0)
     a = ListNode(1)
-    b.next = a
-    a.val = 2
-    print b,a
-    print a.val, b.val
+    b = ListNode(8)
+    #b = a
+    print id(a),id(b)
