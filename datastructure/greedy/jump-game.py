@@ -13,35 +13,25 @@ class Solution:
 
 class Solution2:
     # dynamic programming solution
-    def __init__(self):
-        self.memo = []
-
-    def canJump(self, nums):
+    class Solution(object):
         """
         dp solution
-        :param nums: List[int]
-        :return: bool
         """
-        # memo: -1 stands for UNKNOWN
-        #        0 stands for unreachable
-        #        1 stands for reachable
-        self.memo = [-1 for _ in range(len(nums))]
-        self.memo[-1] = 1
-        return self.canJumpFromPosition(0, nums)
-
-    def canJumpFromPosition(self, position, nums):
-        if self.memo[position] != -1:
-            if self.memo[position] == 1:
-                return True
-            elif self.memo[position] == 0:
-                return False
-        furthestjump = min(position + nums[position], len(nums)-1)
-        for i in range(position + 1, furthestjump + 1):
-            if self.canJumpFromPosition(i, nums):
-                self.memo[i] = 1
-                return True
-        self.memo[position] = 0
-        return False
+        def canJump(self, nums):
+            """
+            :type nums: List[int]
+            :rtype: bool
+            """
+            memo = [-1 for _ in range(len(nums))]
+            memo[0] = 1
+            for i, j in enumerate(nums):
+                if memo[i] == 1:
+                    if i + j < len(nums) - 1:
+                        for _ in range(i + 1, i + j + 1):
+                            memo[_] = 1
+                    else:
+                        return True
+            return False
 
 if __name__ == "__main__":
     num1 = [2,3,1,1,4]
