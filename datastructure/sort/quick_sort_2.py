@@ -3,6 +3,7 @@
 
 class Solution(object):
     def quick_sort(self, array, start, end):
+        print array
         if start < end:
             pivot_index = self.partition(array, start, end)
             self.quick_sort(array, start, pivot_index)
@@ -20,6 +21,7 @@ class Solution(object):
         return pivot_index
 
 if __name__=='__main__':
+    array2 = [1,2,3,4,5]
     array = [8,10,9,6,4,16,5,13,26,18,2,45,34,23,1,7,3]
-    Solution().quick_sort(array, 0, len(array)-1)
+    Solution().quick_sort(array2, 0, len(array2)-1)
     print array
