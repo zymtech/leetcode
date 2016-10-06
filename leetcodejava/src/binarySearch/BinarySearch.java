@@ -5,7 +5,7 @@ package binarySearch;
  */
 public class BinarySearch {
     public static int rank(int key, int[] a){
-
+        return -1;
     }
     public static void main(String[] args){}
 }
